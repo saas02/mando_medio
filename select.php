@@ -16,11 +16,12 @@ $cities = $citiesData->consultarCiudades();
                 <div class="card border-0">                                        
                     <div class="card-body p-0">                                            
                         <select id="ciudades" name="ciudades" class="selectpicker form-control border-0 mb-1 px-4 py-4 rounded shadow">
-                            <option>Seleccione</option>
+                            <option>Seleccione Ciudad</option>
                             <?php
                             if (!empty($cities)) {
                                 foreach ($cities as $key => $city) {
-                                    $selected = ($city['name'] == 'Miami') ? 'selected' : '';
+                                    //$selected = ($city['name'] == 'Miami') ? 'selected' : '';
+                                    $selected = '';
                                     echo "<option " . $selected . " value='" . $city['data'] . "'>" . $city['name'] . "</option>";
                                 }
                             }
